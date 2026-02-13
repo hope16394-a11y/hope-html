@@ -23,7 +23,6 @@ nav a {
     color: white;
     margin: 15px;
     text-decoration: none;
-    font-weight: bold;
 }
 
 nav a:hover {
@@ -38,35 +37,23 @@ nav a:hover {
 .container {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    gap: 20px;
     padding: 20px;
 }
 
 .card {
     background: #1e1e1e;
-    width: 250px;
-    margin: 15px;
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
+    width: 200px;
     text-align: center;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card img {
-    width: 100%;
-    border-radius: 10px;
 }
 
 button {
     background: red;
     color: white;
     border: none;
-    padding: 10px;
-    margin-top: 10px;
+    padding: 8px;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -76,15 +63,8 @@ button:hover {
 }
 
 .cart {
-    background: black;
-    padding: 15px;
+    background: white;
     margin: 20px;
+    padding: 20px;
     border-radius: 10px;
-}
-
-footer {
-    text-align: center;
-    background: black;
-    padding: 15px;
-    margin-top: 20px;
 }
