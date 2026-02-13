@@ -1,162 +1,53 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shadow Katana Shop</title>
-
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #111;
-    color: white;
-}
-
-header {
-    background: black;
-    padding: 20px;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-nav {
-    text-align: center;
-    padding: 10px;
-    background: #1a1a1a;
-}
-
-nav a {
-    color: white;
-    margin: 15px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: red;
-}
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-}
-
-.card {
-    background: #1e1e1e;
-    width: 250px;
-    margin: 15px;
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-button {
-    background: red;
-    color: white;
-    border: none;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: darkred;
-}
-
-#cart {
-    background: black;
-    padding: 15px;
-    margin: 20px;
-    border-radius: 10px;
-}
-
-footer {
-    text-align: center;
-    background: black;
-    padding: 15px;
-    margin-top: 20px;
-}
-</style>
+    <meta charset="UTF-8">
+    <title>Shadow Katana Shop</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
-Shadow Katana Shop 🗡️
+    Shadow Katana Shop 🗡️
 </header>
 
 <nav>
-<a href="#">Accueil</a>
-<a href="#">Katanas</a>
-<a href="#">Accessoires</a>
+    <a href="#">Accueil</a>
+    <a href="#">Katanas</a>
+    <a href="#">Contact</a>
 </nav>
 
-<h2 style="text-align:center; margin-top:20px;">Nos Produits</h2>
+<h2 class="title">Nos Produits</h2>
 
 <div class="container">
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1608889175123-8ee362f3b1d4" alt="Katana">
-<h3>Katana Noir</h3>
-<p>Prix: 120$</p>
-<button onclick="addToCart('Katana Noir',120)">Ajouter</button>
-</div>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1608889175123-8ee362f3b1d4" alt="Katana">
+        <h3>Katana Noir</h3>
+        <p>Prix : 120$</p>
+        <button onclick="addToCart('Katana Noir',120)">Ajouter</button>
+    </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1599669454699-248893623440" alt="Katana">
-<h3>Katana Rouge</h3>
-<p>Prix: 150$</p>
-<button onclick="addToCart('Katana Rouge',150)">Ajouter</button>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1610130383669-95917c70ca20" alt="Katana">
-<h3>Katana Blanc</h3>
-<p>Prix: 100$</p>
-<button onclick="addToCart('Katana Blanc',100)">Ajouter</button>
-</div>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1599669454699-248893623440" alt="Katana">
+        <h3>Katana Rouge</h3>
+        <p>Prix : 150$</p>
+        <button onclick="addToCart('Katana Rouge',150)">Ajouter</button>
+    </div>
 
 </div>
 
-<div id="cart">
-<h2>🛒 Panier</h2>
-<ul id="cart-items"></ul>
-<p><strong>Total: $<span id="total">0</span></strong></p>
+<div class="cart">
+    <h2>🛒 Panier</h2>
+    <ul id="cart-items"></ul>
+    <p><strong>Total : $<span id="total">0</span></strong></p>
 </div>
 
 <footer>
-© 2026 Shadow Katana Shop
+    © 2026 Shadow Katana Shop
 </footer>
 
-<script>
-let total = 0;
-
-function addToCart(name, price) {
-    const list = document.getElementById("cart-items");
-    const item = document.createElement("li");
-    item.textContent = name + " - $" + price;
-    list.appendChild(item);
-
-    total += price;
-    document.getElementById("total").textContent = total;
-}
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
 
